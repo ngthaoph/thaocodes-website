@@ -3,6 +3,7 @@ import Header from "./Header";
 import Description from "./Description";
 import Resume from "./Resume";
 import Footer from "./Footer";
+import Project from "./Project";
 
 import * as styles from "./Layout.css";
 
@@ -30,12 +31,15 @@ function Layout() {
               flex: 1,
               display: "flex",
               flexDirection: "column",
-              maxWidth: "66ch",
+              gap: "2rem",
+
+              // maxWidth: "66ch",
             }}
           >
             <Description />
 
             <Resume />
+            <Project />
           </div>
           <Footer />
         </div>

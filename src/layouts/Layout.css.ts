@@ -5,8 +5,6 @@ export const app = style({
   backgroundColor: vars.colors.background,
   flexDirection: "column",
 
-  margin: "32px 0",
-
   fontFamily: "Inter",
   justifyContent: "center", // Center horizontally
   alignItems: "center", // Center vertically
