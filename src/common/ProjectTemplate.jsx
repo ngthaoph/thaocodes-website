@@ -1,16 +1,17 @@
 import React from "react";
+import * as styles from "./ProjectTemplate.css";
 
 function ProjectTemplate({ name, type, link, image, description }) {
   return (
     <div>
-      <h3>
+      <h3 className={styles.name}>
         {name} • <br />
-        <span style={{ opacity: "50%" }}>{type}</span>
+        <span className={styles.type}>{type}</span>
       </h3>
       <a href={link}>
         <img src={image} style={{ width: "100%" }} />
       </a>
-      <p>{description} </p>
+      <p className={styles.description}>{description} </p>
     </div>
   );
 }
