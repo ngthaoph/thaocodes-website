@@ -9,14 +9,17 @@ export const app = style({
   justifyContent: "center", // Center horizontally
   alignItems: "center", // Center vertically
   minHeight: "100vh", // Ensure the container takes full viewport height
+
   width: "100vw",
+  overflow: "hidden",
 });
 
-export const appBody = style({
-  display: "flex",
-  flexDirection: "column",
-  margin: "0 15rem",
-});
+// export const appBody = style({
+//   display: "flex",
+//   flexDirection: "column",
+//   margin: "0 15rem",
+//   overflowY: "scroll",
+// });
 
 export const header = style({
   display: "flex",

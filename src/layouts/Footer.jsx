@@ -3,24 +3,18 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          columnGap: "15px",
-        }}
-      >
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <h2>Links ↘</h2>
-          <ul>
+          <h2 className="text-xl font-semibold">Links ↘</h2>
+          <ul className="list-none">
             <li>
               <a href="/about">About Me</a>
             </li>
           </ul>
         </div>
         <div>
-          <h2>Socials ↘</h2>
-          <ul>
+          <h2 className="text-xl font-semibold">Socials ↘</h2>
+          <ul className="list-none">
             <li>
               <a href="https://github.com/ngthaoph">Github</a>
             </li>
@@ -30,7 +24,7 @@ function Footer() {
           </ul>
         </div>
       </section>
-      <small style={{ opacity: ".5", fontSize: "1rem" }}>
+      <small className="block text-sm  mt-4">
         © 2024 Thao Nguyen. All rights reserved.
       </small>
     </div>

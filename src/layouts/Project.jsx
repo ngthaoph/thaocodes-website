@@ -27,6 +27,20 @@ function Project() {
           image={ansteylane}
           description="React & Firebase store"
         />
+        <ProjectTemplate
+          name="Anstey Lane Roastery"
+          type="FULL STACK DEVELOPMENT"
+          link="https://anstey-lane-1.onrender.com/"
+          image={ansteylane}
+          description="React & Firebase store"
+        />
+        <ProjectTemplate
+          name="Anstey Lane Roastery"
+          type="FULL STACK DEVELOPMENT"
+          link="https://anstey-lane-1.onrender.com/"
+          image={ansteylane}
+          description="React & Firebase store"
+        />
       </div>
     </div>
   );

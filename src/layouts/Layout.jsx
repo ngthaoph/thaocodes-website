@@ -1,46 +1,31 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "./Header";
-import Description from "./Description";
-import Resume from "./Resume";
 import Footer from "./Footer";
+
+import About from "./AboutMe";
 import Project from "./Project";
+import Contact from "./Contact";
+import Resume from "./Resume";
 
-import * as styles from "./Layout.css";
-
-function Layout() {
+function Layout({ currentPage, showPage }) {
   return (
-    <div className={styles.app}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column", // Or 'row' depending on how you want your components to be laid out
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "20px", // Optional: spacing between your components
-        }}
-      >
-        {/**HEADER */}
+    <div className="flex flex-col min-h-screen min-w-screen overflow-hidden ">
+      {/* HEADER */}
+      <div>
+        <Header />
+      </div>
 
-        <div className={styles.header}>
-          <Header />
-        </div>
-        {/**BODY */}
-        <div className={styles.appBody}>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: "2rem",
+      {/* APP BODY */}
+      <div className="flex-1 overflow-y-auto m-10">
+        <div className="flex flex-col gap-20">
+          {/* <Outlet />  */}
 
-              // maxWidth: "66ch",
-            }}
-          >
-            <Description />
+          <About />
+          <Resume />
+          <Project />
+          <Contact />
 
-            <Resume />
-            <Project />
-          </div>
           <Footer />
         </div>
       </div>

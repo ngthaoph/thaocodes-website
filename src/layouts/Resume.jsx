@@ -2,13 +2,7 @@ import React from "react";
 
 function Resume() {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        fontSize: "1.5rem",
-      }}
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl">
       <div>Resume</div>
       <div>ngthaoph@gmail.com</div>
     </div>

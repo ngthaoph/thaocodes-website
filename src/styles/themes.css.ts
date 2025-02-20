@@ -10,6 +10,7 @@ export const root = createGlobalTheme(":root", {
   colors: {
     // Semantic tokens
     background: "#fffbfc",
+    // background: "#235585",
   },
   height: {
     "1x": "250px",
