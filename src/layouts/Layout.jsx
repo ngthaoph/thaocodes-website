@@ -10,11 +10,10 @@ import Resume from "./Resume";
 
 function Layout({ currentPage, showPage }) {
   return (
-    <div className="flex flex-col min-h-screen min-w-screen overflow-hidden ">
+    <div className="relative flex min-h-screen flex-col">
       {/* HEADER */}
-      <div>
-        <Header />
-      </div>
+
+      <Header />
 
       {/* APP BODY */}
       <div className="flex-1 overflow-y-auto m-10">
