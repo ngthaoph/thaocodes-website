@@ -4,11 +4,13 @@ function AboutMe() {
   return (
     <div>
       <p>
-        <p className="font-extrabold text-2xl">Hello!</p>
+        <h1 className="font-bold text-3xl">Hello!</h1>
         <br />
-        I'm Thao, a self-taught frontend developer and an avid gardener.
+        <p className="fontbold text-xl">
+          I'm Thao, a self-taught frontend developer and an avid gardener.
+        </p>
         <br />
-        So I compost and code simultanously.
+        <p className="fontbold text-xl">So I compost and code simultanously.</p>
       </p>
     </div>
   );

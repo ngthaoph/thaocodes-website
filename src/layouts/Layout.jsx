@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -7,22 +7,25 @@ import About from "./AboutMe";
 import Project from "./Project";
 import Contact from "./Contact";
 import Resume from "./Resume";
+import Next from "./Next";
 
 function Layout({ currentPage, showPage }) {
+  const [active, setActive] = useState(false);
+  const handleToggle = () => {
+    setActive(!active);
+  };
   return (
-    <div className="relative flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen min-w-screen flex-col">
       {/* HEADER */}
 
       <Header />
 
       {/* APP BODY */}
-      <div className="flex-1 overflow-y-auto m-10">
+      <div className="flex-1 overflow-y-auto m-10 p-5">
         <div className="flex flex-col gap-20">
-          {/* <Outlet />  */}
-
           <About />
-          <Resume />
-          <Project />
+          <Next handleToggle={handleToggle} active={active}></Next>
+
           <Contact />
 
           <Footer />

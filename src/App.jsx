@@ -12,32 +12,32 @@ import Resume from "././layouts/Resume";
 import Project from "././layouts/Project";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("page1");
-  const showPage = (page) => {
-    setCurrentPage(page);
+  const [active, setActive] = useState("page1");
+  const handleActive = (component) => {
+    setActive(component);
   };
-  console.log(currentPage);
-  return (
-    // <Routes>
-    //   <Route
-    //     index
-    //     element={
-    //       <Layout
-    //         currentPage={currentPage}
-    //         setCurrentPage={setCurrentPage}
-    //         showPage={showPage}
-    //       />
-    //     }
-    //   />
 
-    //   <Route path="/about" element={<AboutMe />} />
-    //   <Route path="/projects" element={<Project />} />
-    //   <Route path="/contact" element={<Contact />} />
-    //   <Route path="*" element={<NotFound />} />
-    // </Routes>
-    <div>
-      <Layout />
-    </div>
+  return (
+    <Routes>
+      <Route
+        index
+        element={
+          <Layout
+            active={active}
+            setActive={setActive}
+            handleActive={handleActive}
+          />
+        }
+      />
+
+      <Route path="/about" element={<AboutMe />} />
+      <Route path="/projects" element={<Project />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+    // <div>
+    //   <Layout />
+    // </div>
   );
 }
 
