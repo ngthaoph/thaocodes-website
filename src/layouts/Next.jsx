@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "./Project";
+import Project from "./Projects";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 function Next({ handleToggle, active }) {
@@ -9,14 +9,7 @@ function Next({ handleToggle, active }) {
         See my works
         <FaLongArrowAltRight onClick={handleToggle} />
       </h1>
-
-      <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out transform ${
-          active ? "max-h-screen" : "max-h-0"
-        }`}
-      >
-        <Project />
-      </div>
+      <div>{active && <Project />}</div>
     </div>
   );
 }

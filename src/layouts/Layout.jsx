@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import About from "./AboutMe";
-import Project from "./Project";
+
 import Contact from "./Contact";
 import Resume from "./Resume";
 import Next from "./Next";

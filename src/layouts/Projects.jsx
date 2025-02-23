@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProjectTemplate from "./../common/ProjectTemplate";
+import ProjectTemplate from "../common/ProjectTemplate";
 import ansteylane from "../assets/ansteylane.png";
 
-function Project() {
+function Projects() {
   const [selectProject, setSelectProject] = useState(null);
   const [selectColor, setSelectColor] = useState({
     color: "black",
@@ -66,7 +66,7 @@ function Project() {
     {
       id: 1,
       name: "Anstey Lane Roastery",
-      type: "FULL STACK DEVELOPMENT",
+      type: "FULL STACK",
 
       link: "https://anstey-lane-1.onrender.com/",
       image: ansteylane,
@@ -75,32 +75,29 @@ function Project() {
     {
       id: 2,
       name: "TO DO LIST",
-      type: "FRONTEND DEVELOPMENT",
+      type: "FRONTEND",
 
       link: "https://anstey-lane-1.onrender.com/",
       image: ansteylane,
-      description:
-        "A simple web application for managing tasks, with user authentication and real-time updates. This project uses React, Firebase for backend, and Tailwind CSS for styling.",
+      description: "React, Firebase for backend, and Tailwind CSS for styling.",
     },
     {
       id: 3,
       name: "FORM SUBMISSION",
-      type: "FRONTEND DEVELOPMENT",
+      type: "FULLSTACK",
 
       link: "https://anstey-lane-1.onrender.com/",
       image: ansteylane,
-      description:
-        "form submissions, with user authentication and real-time updates. This project uses React, Firebase for backend, and Tailwind CSS for styling.",
+      description: "React, Firebase for backend, and Tailwind CSS for styling.",
     },
     {
       id: 4,
       name: "SEARCH ENGINE",
-      type: "FRONTEND DEVELOPMENT",
+      type: "FRONTEND",
 
       link: "https://anstey-lane-1.onrender.com/",
       image: ansteylane,
-      description:
-        "A simple web application for handling form submissions, with user authentication and real-time updates. This project uses React, Firebase for backend, and Tailwind CSS for styling.",
+      description: "React, Firebase for backend, and Tailwind CSS for styling.",
     },
   ];
 
@@ -122,7 +119,7 @@ function Project() {
   };
   console.log(selectProject);
   return (
-    <div className="grid grid-cols-2 gap-2 p-5 justify-center items-center">
+    <div className="flex flex-row justify-between items-center p-5">
       {projects.map((project) => {
         return (
           <ProjectTemplate
@@ -149,4 +146,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Projects;

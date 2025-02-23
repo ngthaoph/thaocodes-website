@@ -9,7 +9,7 @@ import Contact from "./layouts/Contact";
 
 import Resume from "././layouts/Resume";
 
-import Project from "././layouts/Project";
+import Projects from "././layouts/Projects";
 
 function App() {
   const [active, setActive] = useState("page1");
@@ -31,7 +31,7 @@ function App() {
       />
 
       <Route path="/about" element={<AboutMe />} />
-      <Route path="/projects" element={<Project />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
