@@ -2,12 +2,12 @@ import React from "react";
 import Project from "./Projects";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-function Next({ handleToggle, active }) {
+function Next({ handleActive, active }) {
   return (
     <div>
       <h1 className="font-bold text-3xl flex flex-row items-center">
         See my works
-        <FaLongArrowAltRight onClick={handleToggle} />
+        <FaLongArrowAltRight onClick={handleActive} />
       </h1>
       <div>{active && <Project />}</div>
     </div>

@@ -12,7 +12,7 @@ function ProjectTemplate({
 }) {
   return (
     <div
-      className="w-[200px] h-[200px] p-5 border-2 border-black cursor-grab rounded-[6px] z-10  overflow-hidden"
+      className="w-[200px] h-[200px] p-5 border-2 border-black cursor-grab rounded-[6px] z-10  overflow-hidden "
       style={{
         backgroundColor: bgColor,
         color: color,

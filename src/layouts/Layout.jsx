@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTheme } from "./../context/ThemeContext";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,13 +10,14 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import Next from "./Next";
 
-function Layout({ currentPage, showPage }) {
-  const [active, setActive] = useState(false);
-  const handleToggle = () => {
-    setActive(!active);
-  };
+function Layout({ handleActive, active }) {
+  const { toggleTheme, isDarkMode } = useTheme();
   return (
-    <div className="relative flex min-h-screen min-w-screen flex-col">
+    <div
+      className={`relative flex min-h-screen min-w-screen flex-col ${
+        isDarkMode ? "bg-white" : "bg-slate-500"
+      }`}
+    >
       {/* HEADER */}
 
       <Header />
@@ -24,7 +26,7 @@ function Layout({ currentPage, showPage }) {
       <div className="flex-1 overflow-y-auto m-10 p-5">
         <div className="flex flex-col gap-20">
           <About />
-          <Next handleToggle={handleToggle} active={active}></Next>
+          <Next handleActive={handleActive} active={active}></Next>
 
           <Contact />
 

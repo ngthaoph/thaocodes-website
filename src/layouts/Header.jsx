@@ -1,12 +1,17 @@
 import React from "react";
+
+import Toggle from "./../features/Toggle";
+import { useTheme } from "./../context/ThemeContext";
 import { FiHome } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoGitBranch } from "react-icons/go";
 import { IoToggleSharp } from "react-icons/io5";
+
 import logo from "../assets/logo.svg";
 import Link from "../common/Link";
 
 function Header() {
+  const { toggleTheme, isDarkMode } = useTheme();
   const list = [
     {
       icon: <FiHome />,
@@ -27,7 +32,11 @@ function Header() {
     ,
   ];
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background bg-white gap-20 p-3">
+    <header
+      className={`sticky top-0 z-40 w-full border-b ${
+        isDarkMode ? "bg - white" : "bg-slate-500"
+      } gap-20 p-3`}
+    >
       {/* Adjusted padding and border color */}
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         {/* LEFT */}
@@ -37,7 +46,7 @@ function Header() {
         </div>
         {/* RIGHT */}
         <div className="flex">
-          <ul className="flex space-x-5">
+          <ul className="flex space-x-5 items-center">
             {list.map((item) => (
               <Link
                 key={item.name}
@@ -46,6 +55,8 @@ function Header() {
                 url={item.url}
               />
             ))}
+
+            <Toggle />
           </ul>
         </div>
       </div>

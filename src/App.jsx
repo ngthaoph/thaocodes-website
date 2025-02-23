@@ -1,15 +1,6 @@
 import Layout from "./layouts/Layout.jsx";
 import { React, useState } from "react";
-
-import { Routes, Route } from "react-router";
-//Import pages
-import NotFound from "./pages/NotFound";
-import AboutMe from "././layouts/AboutMe.jsx";
-import Contact from "./layouts/Contact";
-
-import Resume from "././layouts/Resume";
-
-import Projects from "././layouts/Projects";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 function App() {
   const [active, setActive] = useState("page1");
@@ -17,27 +8,21 @@ function App() {
     setActive(component);
   };
 
-  return (
-    <Routes>
-      <Route
-        index
-        element={
-          <Layout
-            active={active}
-            setActive={setActive}
-            handleActive={handleActive}
-          />
-        }
-      />
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
 
-      <Route path="/about" element={<AboutMe />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-    // <div>
-    //   <Layout />
-    // </div>
+  return (
+    <ThemeProvider>
+      <Layout
+        active={active}
+        setActive={setActive}
+        handleActive={handleActive}
+        toggle={toggle}
+        handleToggle={handleToggle}
+      />
+    </ThemeProvider>
   );
 }
 
