@@ -3,25 +3,14 @@ import { React, useState } from "react";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 function App() {
-  const [active, setActive] = useState("page1");
-  const handleActive = (component) => {
-    setActive(component);
-  };
-
-  const [toggle, setToggle] = useState(false);
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const [active, setActive] = useState(false);
+  const handleActive = () => {
+    setActive(!active);
   };
 
   return (
     <ThemeProvider>
-      <Layout
-        active={active}
-        setActive={setActive}
-        handleActive={handleActive}
-        toggle={toggle}
-        handleToggle={handleToggle}
-      />
+      <Layout active={active} handleActive={handleActive} />
     </ThemeProvider>
   );
 }

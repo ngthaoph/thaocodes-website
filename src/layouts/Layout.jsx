@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import About from "./AboutMe";
 
 import Contact from "./Contact";
-import Resume from "./Resume";
+
 import Next from "./Next";
 
 function Layout({ handleActive, active }) {
