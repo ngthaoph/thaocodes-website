@@ -34,7 +34,7 @@ function Header() {
   return (
     <header
       className={`sticky top-0 z-40 w-full border-b ${
-        isDarkMode ? "bg - white" : "bg-slate-500"
+        isDarkMode ? "bg-white" : "bg-slate-500"
       } gap-20 p-3`}
     >
       {/* Adjusted padding and border color */}

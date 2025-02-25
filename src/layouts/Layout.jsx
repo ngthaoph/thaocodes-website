@@ -29,10 +29,9 @@ function Layout({ handleActive, active }) {
           <Next handleActive={handleActive} active={active}></Next>
 
           <Contact />
-
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

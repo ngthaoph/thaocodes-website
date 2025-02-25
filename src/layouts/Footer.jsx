@@ -24,7 +24,7 @@ function Footer() {
           </ul>
         </div>
       </section> */}
-      <small className="block text-sm  mt-4">
+      <small className="sticky block text-sm  mt-4 m-10 p-5">
         © 2024 Thao Nguyen. All rights reserved.
       </small>
     </div>
