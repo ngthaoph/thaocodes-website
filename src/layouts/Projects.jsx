@@ -30,7 +30,7 @@ function Projects() {
       bgColor: "#FFD700", // Gold background
     },
     {
-      color: "#FFFFFF", // White text color
+      color: "black", // White text color
       bgColor: "#8E44AD", // Purple background
     },
     {

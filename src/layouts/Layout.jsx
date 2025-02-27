@@ -15,7 +15,7 @@ function Layout({ handleActive, active }) {
   return (
     <div
       className={`relative flex min-h-screen min-w-screen flex-col ${
-        isDarkMode ? "bg-white" : "bg-slate-500"
+        isDarkMode ? "bg-white" : "bg-gray-900 text-gray-300"
       }`}
     >
       {/* HEADER */}
