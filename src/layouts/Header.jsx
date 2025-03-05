@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Toggle from "./../features/Toggle";
 import { useTheme } from "./../context/ThemeContext";
@@ -31,9 +31,23 @@ function Header() {
 
     ,
   ];
+  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <header
-      className={`sticky top-0 z-40 w-full h-full border-b p-1`}
+      className={`sticky top-0 z-40 w-full h-full border-b p-1 ${
+        isScrolled ? "opacity-25" : ""
+      } `}
       // className={`sticky top-0 z-40 w-full border-b ${
       //   isDarkMode ? "bg-white" : "bg-gray-900 text-gray-300"
       // }  p-2`}

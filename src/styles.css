@@ -48,3 +48,50 @@ body {
     background-color: #f9f9f9;
   }
 } */
+
+.project-container {
+  display: flex;
+  flex-direction: row; /* Stack elements vertically by default */
+  max-width: 66.666667vw; /* Restrict the width */
+  justify-content: space-between; /* Space between the items */
+  align-items: center; /* Center items horizontally */
+  padding: 1.25rem; /* Padding */
+}
+/*Phone 768-480 */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+  .project-container {
+    flex-direction: column;
+  }
+}
+
+/* Medium devices (Tablets, between 601px and 1024px) */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+  .project-container {
+    padding: 1rem;
+  }
+}
+
+/* Large devices (Desktops, 1025px and above) */
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+}

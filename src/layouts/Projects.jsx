@@ -119,7 +119,7 @@ function Projects() {
   };
   console.log(selectProject);
   return (
-    <div className="flex flex-row max-w-[66.666667vw] justify-between items-center p-5">
+    <div className="project-container">
       {projects.map((project) => {
         return (
           <ProjectTemplate
