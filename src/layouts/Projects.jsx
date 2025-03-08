@@ -8,11 +8,8 @@ function Projects() {
     color: "black",
     bgColor: "#c4e456",
   });
+
   const colors = [
-    {
-      color: "black",
-      bgColor: "#c4e456",
-    },
     {
       color: "#60f0c4",
       bgColor: "black",
@@ -119,7 +116,7 @@ function Projects() {
   };
   console.log(selectProject);
   return (
-    <div className="project-container">
+    <div className="flex flex-col max-w-70 justify-start items-center p-5 gap-5 min-md:flex-row max-sm:flex-row">
       {projects.map((project) => {
         return (
           <ProjectTemplate
