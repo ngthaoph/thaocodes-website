@@ -9,7 +9,7 @@ function Next({ handleActive, active }) {
         See my works
         <FaLongArrowAltRight onClick={handleActive} />
       </h1>
-      <div>{active && <Project />}</div>
+      <div className="flex max-md:justify-center">{active && <Project />}</div>
     </div>
   );
 }

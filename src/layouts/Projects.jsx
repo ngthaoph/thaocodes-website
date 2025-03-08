@@ -116,12 +116,13 @@ function Projects() {
   };
   console.log(selectProject);
   return (
-    <div className="flex flex-col max-w-70 justify-start items-center p-5 gap-5 min-md:flex-row max-sm:flex-row">
+    <div className="flex flex-row max-w-70 justify-start items-center p-5 gap-5 max-md:flex-col md:items-center max-sm:flex-col">
       {projects.map((project) => {
         return (
           <ProjectTemplate
             key={project.id}
             name={project.name}
+            ßß
             type={project.type}
             link={project.link}
             description={project.description}
