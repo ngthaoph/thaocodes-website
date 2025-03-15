@@ -48,13 +48,9 @@ function Header() {
       className={`sticky top-0 z-40 w-full h-full border-b p-1 ${
         isScrolled ? "opacity-25" : ""
       } `}
-      // className={`sticky top-0 z-40 w-full border-b ${
-      //   isDarkMode ? "bg-white" : "bg-gray-900 text-gray-300"
-      // }  p-2`}
     >
       {/* Adjusted padding and border color */}
       <div className="flex flex-row justify-between m-3">
-        {/* <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"></div> */}
         {/* LEFT */}
         <div className="flex items-center space-x-5">
           <img src={logo} className="w-12" alt="Logo" />
@@ -67,7 +63,7 @@ function Header() {
               <Link
                 key={item.name}
                 icon={item.icon}
-                name={item.name}
+                // name={item.name}
                 url={item.url}
               />
             ))}

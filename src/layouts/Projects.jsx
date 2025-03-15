@@ -14,10 +14,7 @@ function Projects() {
       color: "#60f0c4",
       bgColor: "black",
     },
-    {
-      color: "#fdc126",
-      bgColor: "#333333",
-    },
+
     {
       color: "#333333", // Dark gray text color
       bgColor: "#F5A623", // Yellow background
@@ -38,10 +35,7 @@ function Projects() {
       color: "#FFFFFF", // White text color
       bgColor: "#34495E", // Dark blue background
     },
-    {
-      color: "black", // White text color
-      bgColor: "#F39C12", // Orange background
-    },
+
     {
       color: "#333333", // Dark gray text color
       bgColor: "#1ABC9C", // Teal background
