@@ -1,6 +1,8 @@
 import Layout from "./layouts/Layout.jsx";
 import { React, useState } from "react";
-import { ThemeProvider } from "./context/ThemeContext.jsx";
+
+import { Routes, Route } from "react-router";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -9,9 +11,15 @@ function App() {
   };
 
   return (
-    <ThemeProvider>
-      <Layout active={active} handleActive={handleActive} />
-    </ThemeProvider>
+    <div>
+      <Routes>
+        <Route
+          path="/"
+          element={<Layout handleActive={handleActive} active={active} />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 }
 

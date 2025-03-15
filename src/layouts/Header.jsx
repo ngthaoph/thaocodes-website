@@ -6,9 +6,11 @@ import { FiHome } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoGitBranch } from "react-icons/go";
 import { IoToggleSharp } from "react-icons/io5";
+import { SiReaddotcv } from "react-icons/si";
 
 import logo from "../assets/logo.svg";
 import Link from "../common/Link";
+import resume from "../assets/resume.pdf";
 
 function Header() {
   const { toggleTheme, isDarkMode } = useTheme();
@@ -28,8 +30,11 @@ function Header() {
       name: "LinkedIn",
       url: "https://linkedin.com/in/thaodev",
     },
-
-    ,
+    {
+      icon: <SiReaddotcv />,
+      name: "Resume",
+      url: "thaocodes/resume.pdf",
+    },
   ];
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
@@ -54,7 +59,6 @@ function Header() {
         {/* LEFT */}
         <div className="flex items-center space-x-5">
           <img src={logo} className="w-12" alt="Logo" />
-          {/* Using Tailwind for width */}
         </div>
         {/* RIGHT */}
         <div className="flex">

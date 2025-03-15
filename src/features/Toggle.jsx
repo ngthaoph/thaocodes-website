@@ -7,7 +7,8 @@ function Toggle() {
   const { isDarkMode, toggleTheme } = useTheme();
   return (
     <div onClick={toggleTheme}>
-      {isDarkMode ? <LuSunMoon /> : <IoSunnyOutline />}
+      {/* {isDarkMode ? <LuSunMoon /> : <IoSunnyOutline />} */}
+      <input type="checkbox" defaultChecked className="toggle toggle-xs" />
     </div>
   );
 }

@@ -33,9 +33,11 @@ function ProjectTemplate({
       </h3>
 
       <p className="text-base opacity-50 m-0">{description} </p>
-      <a href={link}>
-        <GoArrowDownRight />
-      </a>
+      <div className="card-actions">
+        <a href={link}>
+          <GoArrowDownRight />
+        </a>
+      </div>
     </div>
   );
 }

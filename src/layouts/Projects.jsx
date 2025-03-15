@@ -116,7 +116,6 @@ function Projects() {
           <ProjectTemplate
             key={project.id}
             name={project.name}
-            ßß
             type={project.type}
             link={project.link}
             description={project.description}
