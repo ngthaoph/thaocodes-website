@@ -33,7 +33,7 @@ function Header() {
     {
       icon: <SiReaddotcv />,
       name: "Resume",
-      url: "thaocodes/resume.pdf",
+      url: "resume.pdf",
     },
   ];
   const [isScrolled, setIsScrolled] = useState(false);
