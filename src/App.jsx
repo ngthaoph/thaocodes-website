@@ -3,6 +3,7 @@ import { React, useState } from "react";
 
 import { Routes, Route } from "react-router";
 import NotFound from "./pages/NotFound.jsx";
+import HomePage from "./layouts/HomePage";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -16,8 +17,14 @@ function App() {
         <Route
           path="/"
           element={<Layout handleActive={handleActive} active={active} />}
-        />
-        <Route path="*" element={<NotFound />} />
+        >
+          <Route
+            path="/"
+            exact
+            element={<HomePage handleActive={handleActive} active={active} />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </div>
   );

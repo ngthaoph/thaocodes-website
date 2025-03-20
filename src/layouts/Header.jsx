@@ -64,12 +64,7 @@ function Header() {
         <div className="flex">
           <ul className="flex space-x-5 items-center">
             {list.map((item) => (
-              <Link
-                key={item.name}
-                icon={item.icon}
-                // name={item.name}
-                url={item.url}
-              />
+              <Link key={item.name} icon={item.icon} url={item.url} />
             ))}
 
             <Toggle />
